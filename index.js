@@ -11,7 +11,7 @@ var editDistance = require('edit-distance')
 
 const app = express()
 
-var token = "EAAcS0VpnflMBAL1ZB7WKvdFxPmm8YZAW4fAadmp71SXUgeZAvXa8HndBlnJOnjzQasKzqDPGZC08sMkDiHTsEyZAvchKZBPu6F4kjOgjZAZB17IAfvQSK11hNFjS7T2UDla8HfjELUKI95FvBum27nHiGPcuAY78JZChbzZBA2QRDZCHwZDZD"
+var token = "EAAeJc1IRQ9UBAOEwclBtnB15A0TqrAlAuiXvCBLG9CZAOkZCeN6nF6YyxY5SySbBcKrfBHn32ieuXKZA9vWZB2bZCcQrLWwwsEaE7Bw1yAZCXBrJ09dLkWBpUWHuhAdvSPEZCW0gzUamMQKOZBifZAHxso6jtrwGdXjjdPEvhh8PnxAZDZD"
 
 app.set('port' , (process.env.PORT || 5000))
 
