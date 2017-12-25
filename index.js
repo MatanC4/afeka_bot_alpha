@@ -41,7 +41,7 @@ app.post('/webhook/', function(req,res){
             //sendGenericMessage(sender)
             var dist = calcEditDistance(text,"test")
             console.log("############## dist = "+ dist)
-            sendText(sender,"text echo: " + dist)
+            sendText(sender,dist)
         }
     }
     console.log("calling sendStatus")
@@ -49,7 +49,7 @@ app.post('/webhook/', function(req,res){
 
 })
 
-function sendText(sender, text){
+function sendText(sender, ){
     var messageData = {text:text}
     request({
         url: "https://graph.facebook.com/v2.6/me/messages",
