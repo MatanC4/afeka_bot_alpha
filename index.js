@@ -49,7 +49,7 @@ app.post('/webhook/', function(req,res){
 
 })
 
-function sendText(sender, ){
+function sendText(sender,text ){
     var messageData = {text:text}
     request({
         url: "https://graph.facebook.com/v2.6/me/messages",
