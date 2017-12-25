@@ -40,6 +40,7 @@ app.post('/webhook/', function(req,res){
             var text = event.message.text
             //sendGenericMessage(sender)
             var dist = calcEditDistance(text,"test")
+            console.log("############## dist = "+ dist)
             sendText(sender,"text echo: " + dist)
         }
     }
