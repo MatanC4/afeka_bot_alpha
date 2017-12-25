@@ -7,6 +7,7 @@
 var express = require('express')
 var bodyParser = require('body-parser')
 var request = require('request')
+var edit_distance = require('edit-distance')
 
 const app = express()
 
@@ -43,7 +44,7 @@ app.post('/webhook/', function(req,res){
                 //+ text.substring(0,100))
         }
     }
-    res,sendStatus(200)
+    res.sendStatus(200)
 })
 
 function sendText(sender, text){
