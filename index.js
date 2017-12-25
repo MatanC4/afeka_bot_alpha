@@ -7,11 +7,11 @@
 var express = require('express')
 var bodyParser = require('body-parser')
 var request = require('request')
-var edit_distance = require('edit-distance')
+var editDistance = require('edit-distance')
 
 const app = express()
 
-var token = "EAAeJc1IRQ9UBALDYWkF3ZCWmM5YSkow5MGShveLObeZA5ZABEan0IHTdVDKSa14hv7AK8BIoOyQCZAwBMleo5iOOtuesosksPU36ZBtpNYDXFfc6BNX0seZBpbWlLH7wfKfzziRtJkuKgovOkYQBcouKjMLegCZAXe8EasaBN3vxwZDZD"
+var token = "EAAcS0VpnflMBAL1ZB7WKvdFxPmm8YZAW4fAadmp71SXUgeZAvXa8HndBlnJOnjzQasKzqDPGZC08sMkDiHTsEyZAvchKZBPu6F4kjOgjZAZB17IAfvQSK11hNFjS7T2UDla8HfjELUKI95FvBum27nHiGPcuAY78JZChbzZBA2QRDZCHwZDZD"
 
 app.set('port' , (process.env.PORT || 5000))
 
@@ -31,7 +31,6 @@ app.get('/webhook', function(req,res){
     req.send("Wrong token")
 })
 
-
 app.post('/webhook/', function(req,res){
     var messaging_events = req.body.entry[0].messaging
     for (var i = 0; i< messaging_events.length; i++){
@@ -40,11 +39,13 @@ app.post('/webhook/', function(req,res){
         if(event.message && event.message.text){
             var text = event.message.text
             //sendGenericMessage(sender)
-            sendText(sender,"text echo: " + text.substring(0,100))
+            var dist = calcEditDistance(text,"test")
+            sendText(sender,"text echo: " + dist)
         }
     }
     console.log("calling sendStatus")
     res.sendStatus(200)
+
 })
 
 function sendText(sender, text){
@@ -69,8 +70,7 @@ function sendText(sender, text){
 }
 
 
-
-function sendGenericMessage(sender) {
+/*function sendGenericMessage(sender) {
     let messageData = {
         "attachment": {
             "type": "template",
@@ -117,7 +117,19 @@ function sendGenericMessage(sender) {
             console.log('Error: ', response.body.error)
         }
     })
+}*/
+
+function calcEditDistance(a,b){
+    var stringA = a
+    var stringB = b
+    var insert, remove, update
+    insert = remove = function(node) { return 1 }
+    update = function(stringA, stringB) { return stringA !== stringB ? 1 : 0 }
+    var lev = editDistance.levenshtein(stringA, stringB, insert, remove, update)
+    console.log('Levenshtein', lev.distance, lev.pairs(), lev.alignment())
+    return lev.distance
 }
+
 
 app.listen(app.get('port'),function(){
     console.log("running: port")
