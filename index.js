@@ -39,9 +39,7 @@ app.post('/webhook/', function(req,res){
         if(event.message && event.message.text){
             var text = event.message.text
             //sendGenericMessage(sender)
-            var dist = calcEditDistance(text,"מבחן")
-            console.log("############## dist = "+ dist)
-            sendText(sender,dist)
+            sendText(sender,text)
         }
     }
     console.log("calling sendStatus")
