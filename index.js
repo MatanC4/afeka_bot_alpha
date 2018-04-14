@@ -1,3 +1,7 @@
+// git Add .
+// git commit -m "test2"
+//git push heroku master
+
 
 /**
  * Created by matka on 23/12/2017.
@@ -7,66 +11,57 @@
 var express = require('express')
 var bodyParser = require('body-parser')
 var request = require('request')
-var editDistance = require('edit-distance')
-
+var mHelper = require('Utils/messagesHelper')
+var _ = require('lodash')
 const app = express()
 
-var token = "EAAeJc1IRQ9UBAOEwclBtnB15A0TqrAlAuiXvCBLG9CZAOkZCeN6nF6YyxY5SySbBcKrfBHn32ieuXKZA9vWZB2bZCcQrLWwwsEaE7Bw1yAZCXBrJ09dLkWBpUWHuhAdvSPEZCW0gzUamMQKOZBifZAHxso6jtrwGdXjjdPEvhh8PnxAZDZD"
 
 app.set('port' , (process.env.PORT || 5000))
 
 //Allows to process data
 app.use(bodyParser.urlencoded({extended: false}))
-app.use(bodyParser.json())
+app.use(bodyParser.json()) //tells the system to use json(HTTP server)
 
 //Routes
+
+// default URL - home page
 app.get('/', function(req,res){
     res.send("Hi i am a chatbot")
 })
-
+//Add webhook verification
+// Adds support for GET requests to our webhook
 app.get('/webhook', function(req,res){
-    if(req.query['hub.verify_token']=== "afeka"){
-        res.send(req.query['hub.challenge'])
+    var receivedToken = _.get(req,"query.hub.verify_token", "")
+    if(receivedToken === "afeka"){
+        var sentToken = _.get(req,"query.hub.challenge", "")
+        res.send(sentToken)
     }
-    req.send("Wrong token")
+    else{
+        // Responds with '403 Forbidden' if verify tokens do not match
+        res.sendStatus(403);
+        req.send("Wrong token")
+    }
+
 })
 
+// receive a message from the user via fb messenger API
 app.post('/webhook/', function(req,res){
-    var messaging_events = req.body.entry[0].messaging
+    var messaging_events = _.get(req,"body.entry[0].messaging", [])
+
+    //var messaging_events = req.body.entry[0].messaging
     for (var i = 0; i< messaging_events.length; i++){
         var event = messaging_events[i]
         var sender =  event.sender.id
         if(event.message && event.message.text){
             var text = event.message.text
             //sendGenericMessage(sender)
-            sendText(sender,text)
+            mHelper.sendText(sender,text)
         }
     }
     console.log("calling sendStatus")
     res.sendStatus(200)
 
 })
-
-function sendText(sender,text ){
-    var messageData = {text:text}
-    request({
-        url: "https://graph.facebook.com/v2.6/me/messages",
-        qs : {access_token: token},
-        method: "POST",
-        json:{
-            recipient: {id:sender},
-            message:messageData
-        }
-    },
-    function(error, response, body) {
-        if (error){
-            console.log("sending error")
-
-        }else if(response.body.error){
-            console.log("response body error: " + response.body.error.message)
-        }
-    })
-}
 
 
 
