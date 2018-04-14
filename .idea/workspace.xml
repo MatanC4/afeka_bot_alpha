@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65edd29a-89ea-4f59-bc0f-491a6e803786" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
-    </list>
+    <list default="true" id="65edd29a-89ea-4f59-bc0f-491a6e803786" name="Default" comment="" />
     <list id="3601fbc5-725d-4f9c-aac4-263a1d07ea9a" name="Ignore" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,7 +22,7 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
+            <state relative-caret-position="238">
               <caret line="57" column="20" lean-forward="true" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -237,7 +235,7 @@
       <workItem from="1518876921688" duration="679000" />
       <workItem from="1518880222463" duration="571000" />
       <workItem from="1519461143427" duration="144000" />
-      <workItem from="1523690338185" duration="8395000" />
+      <workItem from="1523690338185" duration="8500000" />
     </task>
     <task id="LOCAL-00001" summary="Code alignment to submitted version">
       <created>1523698899835</created>
@@ -250,7 +248,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30044000" />
+    <option name="totallyTimeSpent" value="30149000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -535,7 +533,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
+        <state relative-caret-position="238">
           <caret line="57" column="20" lean-forward="true" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
