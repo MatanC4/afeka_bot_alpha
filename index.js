@@ -14,8 +14,14 @@
 var express = require('express')
 var bodyParser = require('body-parser')
 var mHelper = require('./messagesHelper.js')
+var dbHelper = require('./firebaseHelper.js')
 var _ = require('lodash')
+
+
+//create express server
 const app = express()
+
+
 
 
 app.set('port' , (process.env.PORT || 5000))
@@ -60,6 +66,15 @@ app.post('/webhook/', function(req,res){
         //console.log(text)
 
         if(sender && text){
+            var data = {
+                userId: sender,
+                sender: "user",
+                date :_.get(event, "timestamp", null),
+                message: text,
+                sequence: _.get(event, "message.seq", null),
+                nlpEntity: _.get(event, "message.nlp",null)
+            }
+            dbHelper.saveMessageToConversation(data)
             mHelper.sendText(sender,text)
 
             console.log("Return 200 ok")
