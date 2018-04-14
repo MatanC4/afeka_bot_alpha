@@ -50,22 +50,28 @@ app.get('/webhook', function(req,res){
 app.post('/webhook/', function(req,res){
     var events = _.get(req,"body.entry[0].messaging", [])
     console.log("events:", events.length)
+    console.log(JSON.stringify(events))
 
     events.forEach(function(event){
         var sender = _.get(event,"sender.id", null)
         var text = _.get(event, "message.text", "There seems to be an error, please send your message again")
         console.log(text)
-        
+
         if(sender){
             mHelper.sendText(sender,text)
         }
     })
-    if (!events.length ){
+    console.log("exit forEach")
+
+    if (events.length){
         console.log("calling sendStatus")
 
     }else{
         console.log("No events received ")
     }
+
+    console.log("Return 200 ok")
+
     res.sendStatus(200)
 })
 
