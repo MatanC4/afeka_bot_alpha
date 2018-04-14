@@ -45,20 +45,23 @@ app.get('/webhook', function(req,res){
 
 // receive a message from the user via fb messenger API
 app.post('/webhook/', function(req,res){
-    var messaging_events = _.get(req,"body.entry[0].messaging", [])
+    var events = _.get(req,"body.entry[0].messaging", [])
 
-    //var messaging_events = req.body.entry[0].messaging
-    for (var i = 0; i< messaging_events.length; i++){
-        var event = messaging_events[i]
-        var sender =  event.sender.id
-        if(event.message && event.message.text){
-            var text = event.message.text
-            //sendGenericMessage(sender)
+    events.forEach(function(event){
+        var sender = _.get(event,"sender.id", null)
+        var text = _.get(event, "message.text", "There seems to be an error, please send your message again")
+
+        if(sender){
             mHelper.sendText(sender,text)
         }
+    })
+    if (!events.length ){
+        console.log("calling sendStatus")
+        res.sendStatus(200)
+    }else{
+        console.log("No events received ")
+        res.sendStatus(400) // bad request, invalid param received
     }
-    console.log("calling sendStatus")
-    res.sendStatus(200)
 
 })
 
