@@ -4,8 +4,18 @@
 
 var admin = require('firebase-admin');
 
+var serviceAccount = require("./afekabot-f5a94-firebase-adminsdk-jalex-b6e9d5e146.json");
 
-// initiate the firebase instance, with app AfekaBot credentials
+//initiate the firebase instance, with app AfekaBot credentials
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    databaseURL: "https://afekabot-f5a94.firebaseio.com"
+});
+
+
+
+
+/*
 admin.initializeApp({
     apiKey: "AIzaSyBh0WuRk1BdK8ptpAS1JEFeiKGjskgMmnY",
     authDomain: "afekabot-f5a94.firebaseapp.com",
@@ -13,7 +23,7 @@ admin.initializeApp({
     projectId: "afekabot-f5a94",
     storageBucket: "afekabot-f5a94.appspot.com",
     messagingSenderId: "1002150442373"
-})
+})*/
 
 module.exports.saveMessageToConversation = function(data){
 
