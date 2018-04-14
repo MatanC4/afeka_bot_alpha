@@ -49,28 +49,49 @@ app.get('/webhook', function(req,res){
 // receive a message from the user via fb messenger API
 // also receive an ack after we send the message back to user
 app.post('/webhook/', function(req,res){
-    console.log("Eliran i told you")
+    var events = _.get(req,"body.entry[0].messaging", [])
+    console.log("events:", events.length)
+    console.log(JSON.stringify(events))
 
-    var payload = _.get(req,"body.entry[0].messaging", [])
-    console.log(JSON.stringify(payload))
+    events.forEach(function(event){
+        var sender = _.get(event,"sender.id", null)
+        //var text = _.get(event, "message.text", "There seems to be an error, please send your message again")
+        var text = _.get(event, "message.text", null)
+        //console.log(text)
 
-    payload.forEach(function(item){
-        var message = payload && _.get(item, "sender.message", null) //catch only messages sent from the user
-        if(message){
-            var sender = _.get(item,"sender.id", null)
-            //var text = _.get(event, "message.text", "There seems to be an error, please send your message again")
-            var text = _.get(message, "text", null)
-            //console.log(text)
+        if(sender && text){
+            mHelper.sendText(sender,text)
 
-            if(sender && text){
-                mHelper.sendText(sender,text)
+            console.log("Return 200 ok")
+            res.sendStatus(200)
 
-                console.log("Return 200 ok")
-                res.sendStatus(200)
-
-            }
         }
     })
+
+    /*
+    * console.log("Eliran i told you")
+
+     var payload = _.get(req,"body.entry[0].messaging", [])
+     console.log(JSON.stringify(payload))
+
+     payload.forEach(function(item){
+     var message = payload && _.get(item, "sender.message", null) //catch only messages sent from the user
+     if(message){
+     var sender = _.get(item,"sender.id", null)
+     //var text = _.get(event, "message.text", "There seems to be an error, please send your message again")
+     var text = _.get(message, "text", null)
+     //console.log(text)
+
+     if(sender && text){
+     mHelper.sendText(sender,text)
+
+     console.log("Return 200 ok")
+     res.sendStatus(200)
+
+     }
+     }
+     })
+    * */
 })
 
 
