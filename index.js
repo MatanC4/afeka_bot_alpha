@@ -10,7 +10,6 @@
 'use strict'
 var express = require('express')
 var bodyParser = require('body-parser')
-var request = require('request')
 var mHelper = require('./messagesHelper.js')
 var _ = require('lodash')
 const app = express()
