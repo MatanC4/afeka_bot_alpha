@@ -49,6 +49,7 @@ app.get('/webhook', function(req,res){
 // receive a message from the user via fb messenger API
 // also receive an ack after we send the message back to user
 app.post('/webhook/', function(req,res){
+    console.log("Eliran i told you")
 
     var payload = _.get(req,"body.entry[0].messaging", null)
     console.log(JSON.stringify(payload))
@@ -70,8 +71,6 @@ app.post('/webhook/', function(req,res){
             }
         }
     })
-
-
 })
 
 
