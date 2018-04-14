@@ -54,10 +54,11 @@ app.post('/webhook/', function(req,res){
 
     events.forEach(function(event){
         var sender = _.get(event,"sender.id", null)
-        var text = _.get(event, "message.text", "There seems to be an error, please send your message again")
-        console.log(text)
+        //var text = _.get(event, "message.text", "There seems to be an error, please send your message again")
+        var text = _.get(event, "message.text", null)
+        //console.log(text)
 
-        if(sender){
+        if(sender && text){
             mHelper.sendText(sender,text)
 
             console.log("Return 200 ok")
