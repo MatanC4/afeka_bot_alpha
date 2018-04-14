@@ -3,6 +3,9 @@
 //git push heroku master
 
 
+//stop  process - heroku ps:scale web=0
+//run process  - heroku ps:scale web=1
+
 /**
  * Created by matka on 23/12/2017.
  */
@@ -57,12 +60,11 @@ app.post('/webhook/', function(req,res){
     })
     if (!events.length ){
         console.log("calling sendStatus")
-        res.sendStatus(200)
+        
     }else{
         console.log("No events received ")
-        res.sendStatus(400) // bad request, invalid param received
     }
-
+    res.sendStatus(200)
 })
 
 
