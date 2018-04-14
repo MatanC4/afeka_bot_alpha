@@ -47,15 +47,17 @@ app.get('/webhook', function(req,res){
 })
 
 // receive a message from the user via fb messenger API
+// also receive an ack after we send the message back to user
 app.post('/webhook/', function(req,res){
-    var events = _.get(req,"body.entry[0].messaging", [])
-    console.log("events:", events.length)
-    console.log(JSON.stringify(events))
 
-    events.forEach(function(event){
-        var sender = _.get(event,"sender.id", null)
+    var payload = _.get(req,"body.entry[0].messaging[0]", null)
+    console.log(JSON.stringify(payload))
+
+    var message = payload && _.get(payload, "sender.message", null) //catch only messages sent from the user
+    if(message){
+        var sender = _.get(payload,"sender.id", null)
         //var text = _.get(event, "message.text", "There seems to be an error, please send your message again")
-        var text = _.get(event, "message.text", null)
+        var text = _.get(message, "text", null)
         //console.log(text)
 
         if(sender && text){
@@ -65,7 +67,8 @@ app.post('/webhook/', function(req,res){
             res.sendStatus(200)
 
         }
-    })
+    }
+
 })
 
 
