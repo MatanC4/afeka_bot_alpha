@@ -11,7 +11,7 @@
 var express = require('express')
 var bodyParser = require('body-parser')
 var request = require('request')
-var mHelper = require('Utils/messagesHelper.js')
+var mHelper = require('./messagesHelper')
 var _ = require('lodash')
 const app = express()
 
