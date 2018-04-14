@@ -51,7 +51,7 @@ app.get('/webhook', function(req,res){
 app.post('/webhook/', function(req,res){
     console.log("Eliran i told you")
 
-    var payload = _.get(req,"body.entry[0].messaging", null)
+    var payload = _.get(req,"body.entry[0].messaging", [])
     console.log(JSON.stringify(payload))
 
     payload.forEach(function(item){
