@@ -59,20 +59,12 @@ app.post('/webhook/', function(req,res){
 
         if(sender){
             mHelper.sendText(sender,text)
+
+            console.log("Return 200 ok")
+            res.sendStatus(200)
+
         }
     })
-    console.log("exit forEach")
-
-    if (events.length){
-        console.log("calling sendStatus")
-
-    }else{
-        console.log("No events received ")
-    }
-
-    console.log("Return 200 ok")
-
-    res.sendStatus(200)
 })
 
 
