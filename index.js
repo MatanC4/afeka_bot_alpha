@@ -49,18 +49,20 @@ app.get('/webhook', function(req,res){
 // receive a message from the user via fb messenger API
 app.post('/webhook/', function(req,res){
     var events = _.get(req,"body.entry[0].messaging", [])
+    console.log("events:", events.length)
 
     events.forEach(function(event){
         var sender = _.get(event,"sender.id", null)
         var text = _.get(event, "message.text", "There seems to be an error, please send your message again")
-
+        console.log(text)
+        
         if(sender){
             mHelper.sendText(sender,text)
         }
     })
     if (!events.length ){
         console.log("calling sendStatus")
-        
+
     }else{
         console.log("No events received ")
     }
