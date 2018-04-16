@@ -16,6 +16,7 @@ var bodyParser = require('body-parser')
 var mHelper = require('./messagesHelper.js')
 var dbHelper = require('./firebaseHelper.js')
 var _ = require('lodash')
+var nlpClient = require('./nlpHelper.js')
 
 
 //create express server
@@ -74,6 +75,13 @@ app.post('/webhook/', function(req,res){
                 sequence: _.get(event, "message.seq", null),
                 nlpEntity: _.get(event, "message.nlp",null)
             }
+
+            nlpClient.message('what is the weather in London?', {})
+                .then((data) => {
+                    console.log('#####################  Yay, got Wit.ai response: ' + JSON.stringify(data));
+                })
+                .catch(console.error);
+
             dbHelper.saveMessageToConversation(data)
             mHelper.sendText(sender,text,data)
 
