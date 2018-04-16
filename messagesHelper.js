@@ -23,6 +23,7 @@ module.exports.sendText =  function(sender,text,dtObj){
             }else if(response.body.error){
                 console.log("response body error: " + response.body.error.message)
             }else{
+                console.log("arrived to line 26")
                 var data = {
                     userId: sender,
                     sender: "bot",
