@@ -75,7 +75,7 @@ app.post('/webhook/', function(req,res){
                 nlpEntity: _.get(event, "message.nlp",null)
             }
             dbHelper.saveMessageToConversation(data)
-            mHelper.sendText(sender,text)
+            mHelper.sendText(sender,text,data)
 
 
 
