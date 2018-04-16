@@ -36,7 +36,12 @@ module.exports.saveMessageToConversation = function(data){
         data.messageId = messagegRef.key
 
         messagegRef.update(data).then(function(res){
-
+            if(data.sender === "user"){
+                var sender = data.sender
+                mHelper.sendText(sender,data.message,data)
+                console.log("#############  Bot response was saved:")
+                //console.log(JSON.stringify(res))
+            }
 
 
             // how to return result from promise
