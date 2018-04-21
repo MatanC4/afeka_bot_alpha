@@ -75,19 +75,27 @@ app.post('/webhook/', function(req,res){
                 sequence: _.get(event, "message.seq", null),
                 nlpEntity: _.get(event, "message.nlp",null)
             }
-
+            
             nlpClient.message('what is the weather in London?', {})
                 .then((data) => {
                     console.log('#####################  Yay, got Wit.ai response: ' + JSON.stringify(data));
                 })
                 .catch(console.error);
 
-            dbHelper.saveMessageToConversation(data)
-            mHelper.sendText(sender,text,data)
+            dbHelper.saveMessageToConversation(data).then(function(res){
+                if(res.sender === "user"){
+                    var sender = res.sender
+                    mHelper.sendText(sender,res.message,res)
+                    console.log("#############  Bot response was saved:")
+                    //console.log(JSON.stringify(res))
+                }
 
 
-
-
+                // how to return result from promise
+                console.log("user conversation was updated:")
+                console.log(JSON.stringify(res))
+            })
+            //mHelper.sendText(sender,text,data)
 
 
             console.log("Return 200 ok")

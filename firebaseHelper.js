@@ -25,7 +25,7 @@ admin.initializeApp({
     messagingSenderId: "1002150442373"
 })*/
 
-module.exports.saveMessageToConversation = function(data){
+module.exports.saveMessageToConversation = function(data) {
 
     var messagegRef = admin
         .database()
@@ -33,23 +33,28 @@ module.exports.saveMessageToConversation = function(data){
         .child(data.userId)
         .push()
 
-        data.messageId = messagegRef.key
+    data.messageId = messagegRef.key
 
-        messagegRef.update(data).then(function(res){
-            if(data.sender === "user"){
-                var sender = data.sender
-                mHelper.sendText(sender,data.message,data)
-                console.log("#############  Bot response was saved:")
-                //console.log(JSON.stringify(res))
-            }
-
-
-            // how to return result from promise
-        console.log("user conversation was updated:")
-        console.log(JSON.stringify(res))
-
-    })
+    return messagegRef.update(data)
 }
+/*return messagegRef.update(data).then(function(res){
+
+    if(data.sender === "user"){
+        var sender = data.sender
+        mHelper.sendText(sender,data.message,data)
+        console.log("#############  Bot response was saved:")
+        //console.log(JSON.stringify(res))
+    }
+
+
+    // how to return result from promise
+    console.log("user conversation was updated:")
+    console.log(JSON.stringify(res))
+
+})
+}*/
+
+
 
 
 module.exports.saveBotResponse = function(data){
