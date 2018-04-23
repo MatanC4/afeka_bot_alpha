@@ -83,6 +83,7 @@ app.post('/webhook/', function(req,res){
                 .catch(console.error);*/
 
             dbHelper.saveMessageToConversation(data).then(function(res){
+                console.log(JSON.stringify(res))
                 if(res.sender === "user"){
                     var sender = res.sender
                     mHelper.sendText(sender,res.message,res)
