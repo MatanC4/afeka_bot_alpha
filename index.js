@@ -76,11 +76,11 @@ app.post('/webhook/', function(req,res){
                 nlpEntity: _.get(event, "message.nlp",null)
             }
             
-            nlpClient.message('can i get to exams code?', {})
+           /* nlpClient.message('can i get to exams code?', {})
                 .then((data) => {
                     console.log('#####################  Yay, got Wit.ai response: ' + JSON.stringify(data));
                 })
-                .catch(console.error);
+                .catch(console.error);*/
 
             dbHelper.saveMessageToConversation(data).then(function(res){
                 if(res.sender === "user"){
