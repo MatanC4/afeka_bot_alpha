@@ -76,7 +76,7 @@ app.post('/webhook/', function(req,res){
                 nlpEntity: _.get(event, "message.nlp",null)
             }
             
-            nlpClient.message('what is the weather in London?', {})
+            nlpClient.message('can i get to exams code?', {})
                 .then((data) => {
                     console.log('#####################  Yay, got Wit.ai response: ' + JSON.stringify(data));
                 })
