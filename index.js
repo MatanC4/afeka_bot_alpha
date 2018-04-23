@@ -91,11 +91,12 @@ app.post('/webhook/', function(req,res){
                     //console.log(JSON.stringify(res))
                 }
 
-
                 // how to return result from promise
                 console.log("user conversation was updated:")
                 console.log(JSON.stringify(res))
-            })
+            }).catch(function () {
+                console.log("Promise Rejected");
+            });
             //mHelper.sendText(sender,text,data)
 
 
