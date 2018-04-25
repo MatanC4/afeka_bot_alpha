@@ -19,6 +19,11 @@ var _ = require('lodash')
 //var nlpClient = require('./nlpHelper.js')
 const {Wit, log} = require('node-wit');
 
+var spawn = require("child_process").spawn;
+var pythonProcess = spawn('python',["/Users/matka/Documents/school/Final project/afeka_bot_alpha/sentimentAnalysis/functions.py"]);
+//https://stackoverflow.com/questions/23450534/how-to-call-python-function-from-nodejs
+
+
 const nlpClient = new Wit({
     accessToken: "GLAVEUNCTYGSRIW5XH46XFITF45LP2WH",
     logger: new log.Logger(log.DEBUG) // optional
@@ -85,12 +90,20 @@ app.post('/webhook/', function(req,res){
                 sequence: _.get(event, "message.seq", null),
                 nlpEntity: _.get(event, "message.nlp",null)
             }
-            
+
+
+            // checking NLP system
            nlpClient.message(text, {})
                 .then((data) => {
                     console.log('#####################  Yay, got Wit.ai response: ' + JSON.stringify(data));
                 })
                 .catch(console.error);
+
+            // checking call to python algorithm
+            pythonProcess.stdout.on('data', function (data){
+                console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$coming back from pyhton " +JSON.stringify(data))
+            });
+
 
             dbHelper.saveMessageToConversation(data).then(function(res){
                 console.log(JSON.stringify(res))
