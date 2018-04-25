@@ -20,7 +20,7 @@ var _ = require('lodash')
 const {Wit, log} = require('node-wit');
 
 var spawn = require("child_process").spawn;
-var pythonProcess = spawn('python',['./../sentimentAnalysis/functions.py']);
+var pythonProcess = spawn('python',['/sentimentAnalysis/functions.py']);
 //https://stackoverflow.com/questions/23450534/how-to-call-python-function-from-nodejs
 
 
