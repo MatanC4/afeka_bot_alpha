@@ -24,12 +24,12 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="22" column="37" lean-forward="false" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+            <state relative-caret-position="65">
+              <caret line="22" column="127" lean-forward="false" selection-start-line="22" selection-start-column="127" selection-end-line="22" selection-end-column="127" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#817#859#0" expanded="false" />
-                <element signature="e#1325#1671#0" expanded="false" />
+                <element signature="e#876#918#0" expanded="false" />
+                <element signature="e#1384#1730#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -180,6 +180,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="afeka_bot_alpha" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="afeka_bot_alpha" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sentimentAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -300,7 +314,7 @@
       <workItem from="1518880222463" duration="571000" />
       <workItem from="1519461143427" duration="144000" />
       <workItem from="1523690338185" duration="18880000" />
-      <workItem from="1524057997219" duration="8823000" />
+      <workItem from="1524057997219" duration="8886000" />
     </task>
     <task id="LOCAL-00001" summary="Code alignment to submitted version">
       <created>1523698899835</created>
@@ -334,7 +348,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49352000" />
+    <option name="totallyTimeSpent" value="49415000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -395,8 +409,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#817#859#0" expanded="false" />
-            <element signature="e#1325#1671#0" expanded="false" />
+            <element signature="e#876#918#0" expanded="false" />
+            <element signature="e#1384#1730#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -439,8 +453,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#817#859#0" expanded="false" />
-            <element signature="e#1325#1671#0" expanded="false" />
+            <element signature="e#876#918#0" expanded="false" />
+            <element signature="e#1384#1730#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -466,8 +480,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#817#859#0" expanded="false" />
-            <element signature="e#1325#1671#0" expanded="false" />
+            <element signature="e#876#918#0" expanded="false" />
+            <element signature="e#1384#1730#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -485,35 +499,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#817#859#0" expanded="false" />
-            <element signature="e#1325#1671#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#817#859#0" expanded="false" />
-            <element signature="e#1325#1671#0" expanded="false" />
+            <element signature="e#876#918#0" expanded="false" />
+            <element signature="e#1384#1730#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -539,8 +526,35 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#817#859#0" expanded="false" />
-            <element signature="e#1325#1671#0" expanded="false" />
+            <element signature="e#876#918#0" expanded="false" />
+            <element signature="e#1384#1730#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#876#918#0" expanded="false" />
+            <element signature="e#1384#1730#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -558,8 +572,8 @@
           <caret line="121" column="0" lean-forward="true" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#817#859#0" expanded="false" />
-            <element signature="e#1325#1671#0" expanded="false" />
+            <element signature="e#876#918#0" expanded="false" />
+            <element signature="e#1384#1730#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -586,8 +600,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#817#859#0" expanded="false" />
-            <element signature="e#1325#1671#0" expanded="false" />
+            <element signature="e#876#918#0" expanded="false" />
+            <element signature="e#1384#1730#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -707,12 +721,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="22" column="37" lean-forward="false" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+        <state relative-caret-position="65">
+          <caret line="22" column="127" lean-forward="false" selection-start-line="22" selection-start-column="127" selection-end-line="22" selection-end-column="127" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#817#859#0" expanded="false" />
-            <element signature="e#1325#1671#0" expanded="false" />
+            <element signature="e#876#918#0" expanded="false" />
+            <element signature="e#1384#1730#0" expanded="false" />
           </folding>
         </state>
       </provider>
