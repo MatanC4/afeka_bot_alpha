@@ -20,7 +20,7 @@ var _ = require('lodash')
 const {Wit, log} = require('node-wit');
 
 var spawn = require("child_process").spawn;
-var pythonProcess = spawn('python',["/Users/matka/Documents/school/Final project/afeka_bot_alpha/sentimentAnalysis/functions.py"]);
+var pythonProcess = spawn('python',['./../sentimentAnalysis/functions.py']);
 //https://stackoverflow.com/questions/23450534/how-to-call-python-function-from-nodejs
 
 
@@ -100,7 +100,9 @@ app.post('/webhook/', function(req,res){
                 .catch(console.error);
 
             // checking call to python algorithm
-            console.log("Calling pyhton process/n\n")
+
+            var a = pythonProcess.connected
+            console.log("Calling pyhton process ---- connected --"+ a +"/n\n")
             pythonProcess.stdout.on('data', function (data){
                 console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$coming back from pyhton " +JSON.stringify(data))
             });
