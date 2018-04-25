@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65edd29a-89ea-4f59-bc0f-491a6e803786" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
     </list>
     <list id="3601fbc5-725d-4f9c-aac4-263a1d07ea9a" name="Ignore" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -24,8 +24,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1364">
-              <caret line="103" column="57" lean-forward="false" selection-start-line="103" selection-start-column="57" selection-end-line="103" selection-end-column="57" />
+            <state relative-caret-position="124">
+              <caret line="102" column="51" lean-forward="false" selection-start-line="102" selection-start-column="51" selection-end-line="102" selection-end-column="51" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#876#918#0" expanded="false" />
@@ -180,38 +180,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="afeka_bot_alpha" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="afeka_bot_alpha" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sentimentAnalysis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="afeka_bot_alpha" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="afeka_bot_alpha" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sentimentAnalysis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -332,7 +300,7 @@
       <workItem from="1518880222463" duration="571000" />
       <workItem from="1519461143427" duration="144000" />
       <workItem from="1523690338185" duration="18880000" />
-      <workItem from="1524057997219" duration="7806000" />
+      <workItem from="1524057997219" duration="8094000" />
     </task>
     <task id="LOCAL-00001" summary="Code alignment to submitted version">
       <created>1523698899835</created>
@@ -366,7 +334,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48335000" />
+    <option name="totallyTimeSpent" value="48623000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -379,8 +347,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="14" y="57" width="1280" height="686" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18189038" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18189038" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -738,8 +707,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1364">
-          <caret line="103" column="57" lean-forward="false" selection-start-line="103" selection-start-column="57" selection-end-line="103" selection-end-column="57" />
+        <state relative-caret-position="124">
+          <caret line="102" column="51" lean-forward="false" selection-start-line="102" selection-start-column="51" selection-end-line="102" selection-end-column="51" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#876#918#0" expanded="false" />

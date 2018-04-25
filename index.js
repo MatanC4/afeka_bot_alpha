@@ -100,6 +100,7 @@ app.post('/webhook/', function(req,res){
                 .catch(console.error);
 
             // checking call to python algorithm
+            console.log("Calling pyhton process/n\n")
             pythonProcess.stdout.on('data', function (data){
                 console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$coming back from pyhton " +JSON.stringify(data))
             });
