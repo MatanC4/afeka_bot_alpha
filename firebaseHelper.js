@@ -26,7 +26,7 @@ admin.initializeApp({
 })*/
 
 module.exports.saveMessageToConversation = function(data) {
-
+    console.log(JSON.stringify("enetered saveMessageToConversation"))
     var messagegRef = admin
         .database()
         .ref("userConversation")
@@ -34,7 +34,7 @@ module.exports.saveMessageToConversation = function(data) {
         .push()
 
     data.messageId = messagegRef.key
-
+    console.log(JSON.stringify("Got ID", data.messageId))
     return messagegRef.update(data)
 }
 /*return messagegRef.update(data).then(function(res){
