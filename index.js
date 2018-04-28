@@ -114,8 +114,8 @@ app.post('/webhook/', function(req,res){
                 //console.log("Got response from saveMessageToConversation")
                 //console.log(JSON.stringify(res))
                 if(res.sender === "user"){
-                    var sender = res.sender
-                    mHelper.sendText(sender,res.message,res)
+                    //var sender = res.sender
+                    mHelper.sendText(res.userId,res.message,res)
                     console.log("#############  Bot response was saved:")
                     //console.log(JSON.stringify(res))
                 }
