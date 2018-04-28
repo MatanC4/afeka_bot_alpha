@@ -6,38 +6,42 @@ var dbHelper = require('./firebaseHelper.js')
 var token =  "EAAeJc1IRQ9UBAOEwclBtnB15A0TqrAlAuiXvCBLG9CZAOkZCeN6nF6YyxY5SySbBcKrfBHn32ieuXKZA9vWZB2bZCcQrLWwwsEaE7Bw1yAZCXBrJ09dLkWBpUWHuhAdvSPEZCW0gzUamMQKOZBifZAHxso6jtrwGdXjjdPEvhh8PnxAZDZD"
 
 
-module.exports.sendText =  function(sender,text,dtObj){
-    var messageData = {text:text}
-    request({
+module.exports.saveMessage =  function(data) {
+    // save incoming msg from user to DB and
+   return dbHelper.saveMessageToConversation(data).then(function(res){
+        console.log("user conversation was updated:")
+        console.log(JSON.stringify(res))
+       return Promise.resolve(res)
+    }).catch(function (err) {
+        console.log("Promise Rejected" , err);
+        return Promise.reject(err)
+    });
+}
+
+
+module.exports.respondToUser =  function(data){
+    // execute http request to send message to user
+   return request({
             url: "https://graph.facebook.com/v2.6/me/messages",
             qs : {access_token: token},
             method: "POST",
+            //request payload
             json:{
-                recipient: {id:sender.toString()},
-                message:messageData
+                recipient: {id: data.userId},
+                message: {text: data.responseText}
             }
         },
-        function(error, response, body) {
-            if (error){
-                console.log("sending error")
-
-            }else if(response.body.error){
-                console.log("response body error: " + response.body.error.message)
+        // implement the request result callback
+        function(err, res, body) {
+            if (err){
+                console.log("Sending response to user has failed",err)
+            }else if(res.body.error){
+                console.log("Response body error -  sending message to user failed: " + res.body.error.message)
             }else{
-                console.log("arrived to line 26")
-                var data = {
-                    userId: sender,
-                    sender: "bot",
-                    date : Date.now(),
-                    message: text,
-                    sequence: null ,
-                    nlpEntity: _.get(dtObj, "nlpEntity",null),
-                    refToUserMsg: _.get(dtObj,"messageId",null)
-                }
-
-                dbHelper.saveMessageToConversation(data)
-
+                // success
+                return Promise.resolve(res)
             }
+            return Promise.reject(err || res.body.error)
         })
 }
 

@@ -15,21 +15,18 @@
 'use strict'
 var express = require('express')
 var bodyParser = require('body-parser')
-var mHelper = require('./messagesHelper.js')
-var dbHelper = require('./firebaseHelper.js')
+var convHelper = require('./conversationHelper.js')
 var _ = require('lodash')
-//var nlpClient = require('./nlpHelper.js')
-const {Wit, log} = require('node-wit');
 
 var spawn = require("child_process").spawn;
 var pythonProcess = spawn('python',['/Users/matka/Documents/school/Final project/afeka_bot_alpha/sentimentAnalysis/functions.py']);
 //https://stackoverflow.com/questions/23450534/how-to-call-python-function-from-nodejs
 
 
-const nlpClient = new Wit({
+/*const nlpClient = new Wit({
     accessToken: "GLAVEUNCTYGSRIW5XH46XFITF45LP2WH",
     logger: new log.Logger(log.DEBUG) // optional
-});/**
+});
  * Created by matka on 17/04/2018.
  */
 
@@ -94,46 +91,18 @@ app.post('/webhook/', function(req,res){
             }
 
 
-            // checking NLP system
-           nlpClient.message(text, {})
-                .then((data) => {
-                    console.log('#####################  Yay, got Wit.ai response: ' + JSON.stringify(data));
-                })
-                .catch(console.error);
-
-            // checking call to python algorithm
-
-            var a = pythonProcess.connected
-            console.log("Calling pyhton process ---- connected --"+ a +"/n\n")
-            pythonProcess.stdout.on('data', function (data){
-                console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$coming back from pyhton " +JSON.stringify(data))
-            });
-
             //console.log(JSON.stringify(data))
-            dbHelper.saveMessageToConversation(data).then(function(res){
-                //console.log("Got response from saveMessageToConversation")
-                //console.log(JSON.stringify(res))
-                if(res.sender === "user"){
-                    //var sender = res.sender
-                    mHelper.sendText(res.userId,res.message,res)
-                    console.log("#############  Bot response was saved:")
-                    //console.log(JSON.stringify(res))
-                }
+            convHelper.handleIncomingMessage(data)
 
-                // how to return result from promise
-                console.log("user conversation was updated:")
-                console.log(JSON.stringify(res))
-            }).catch(function (err) {
-                console.log("Promise Rejected" , err);
-            });
-            //mHelper.sendText(sender,text,data)
-
-
+            // always return 200 ok - to avoid infinite loop in fb API
             console.log("Return 200 ok")
             res.sendStatus(200)
 
         }
     })
+
+
+
 
     /*
     * console.log("Eliran i told you")
@@ -160,6 +129,7 @@ app.post('/webhook/', function(req,res){
      })
     * */
 })
+
 
 
 

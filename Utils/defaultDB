@@ -1,0 +1,53 @@
+{
+  "protocol_request":{
+    "exams":
+    {
+      "type": "exams",
+      "url": "https://www.afeka.ac.il/media/586955/%D7%A0%D7%95%D7%94%D7%9C-%D7%91%D7%97%D7%99%D7%A0%D7%95%D7%AA-%D7%95%D7%AA%D7%A8%D7%92%D7%99%D7%9C%D7%99%D7%9D-%D7%9C%D7%A1%D7%98%D7%95%D7%93%D7%A0%D7%98%D7%99%D7%9D-%D7%AA%D7%95%D7%90%D7%A8-%D7%A8%D7%90%D7%A9%D7%95%D7%9F-220418.pdf"
+
+    },
+    "library":
+    {
+      "type":"library",
+      "url": "https://www.afeka.ac.il/media/586889/%D7%AA%D7%A7%D7%A0%D7%95%D7%9F-%D7%94%D7%A1%D7%A4%D7%A8%D7%99%D7%99%D7%94-%D7%A1%D7%98%D7%95%D7%93%D7%A0%D7%98%D7%99%D7%9D.pdf"
+    },
+    "discipline":
+    {
+      "type": "discipline",
+      "url":"https://www.afeka.ac.il/media/586570/%D7%AA%D7%A7%D7%A0%D7%95%D7%9F-%D7%9E%D7%A9%D7%9E%D7%A2%D7%AA-%D7%A1%D7%98%D7%95%D7%93%D7%A0%D7%98%D7%99%D7%9D-%D7%99%D7%95%D7%A0%D7%99-2017.pdf"
+    },
+    "sexual_har":
+    {
+      "type": "sexual_har",
+      "url":"https://www.afeka.ac.il/media/586672/%D7%9E%D7%A0%D7%99%D7%A2%D7%AA-%D7%94%D7%98%D7%A8%D7%93%D7%94-%D7%A2%D7%91%D7%A8%D7%99%D7%AA.pdf"
+    },
+    "birth_adoption":
+    {
+      "type": "birth_adoption",
+      "url":"https://www.afeka.ac.il/media/586414/%D7%A0%D7%95%D7%94%D7%9C-%D7%96%D7%9B%D7%95%D7%99%D7%95%D7%AA-%D7%A1%D7%98%D7%95%D7%93%D7%A0%D7%98%D7%99%D7%95%D7%AA-%D7%91%D7%98%D7%99%D7%A4%D7%95%D7%9C%D7%99-%D7%A4%D7%95%D7%A8%D7%99%D7%95%D7%AA-%D7%94%D7%99%D7%A8%D7%99%D7%95%D7%9F-%D7%9C%D7%99%D7%93%D7%94-%D7%90%D7%99%D7%9E%D7%95%D7%A5-%D7%9E%D7%A9%D7%9E%D7%95%D7%A8%D7%AA-%D7%90%D7%95-%D7%90%D7%95%D7%9E%D7%A0%D7%94-%D7%AA%D7%A9%D7%A2%D7%92.pdf"
+    }
+},
+  "phone_number": {
+    "library": {
+      "type": "library",
+      "number": "03-7688613"
+    },
+    "tuition": {
+      "type": "tuition",
+      "number": "03-7688654"
+    }
+  },
+  "email": {
+    "tuition": {
+      "contacts":{
+        "batia":"batia@afeka.ac.il",
+        "ifat": "ifatw@afeka.ac.il"
+        }
+      },
+    "minhal":{
+      "contacts":{
+        "general":"afeka_m@afeka.ac.il"
+      }
+    }
+  }
+}
