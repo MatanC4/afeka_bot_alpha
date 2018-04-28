@@ -109,6 +109,7 @@ app.post('/webhook/', function(req,res){
 
             console.log(JSON.stringify(data))
             dbHelper.saveMessageToConversation(data).then(function(res){
+                console.log("Got response from saveMessageToConversation")
                 console.log(JSON.stringify(res))
                 if(res.sender === "user"){
                     var sender = res.sender
