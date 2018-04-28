@@ -109,10 +109,10 @@ app.post('/webhook/', function(req,res){
                 console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$coming back from pyhton " +JSON.stringify(data))
             });
 
-            console.log(JSON.stringify(data))
+            //console.log(JSON.stringify(data))
             dbHelper.saveMessageToConversation(data).then(function(res){
-                console.log("Got response from saveMessageToConversation")
-                console.log(JSON.stringify(res))
+                //console.log("Got response from saveMessageToConversation")
+                //console.log(JSON.stringify(res))
                 if(res.sender === "user"){
                     var sender = res.sender
                     mHelper.sendText(sender,res.message,res)

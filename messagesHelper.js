@@ -13,7 +13,7 @@ module.exports.sendText =  function(sender,text,dtObj){
             qs : {access_token: token},
             method: "POST",
             json:{
-                recipient: {id:sender},
+                recipient: {id:sender.toString()},
                 message:messageData
             }
         },
