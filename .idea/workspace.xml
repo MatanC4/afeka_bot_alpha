@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65edd29a-89ea-4f59-bc0f-491a6e803786" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/firebaseHelper.js" afterPath="$PROJECT_DIR$/firebaseHelper.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
     </list>
     <list id="3601fbc5-725d-4f9c-aac4-263a1d07ea9a" name="Ignore" comment="" />
@@ -22,15 +22,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="111" column="74" lean-forward="true" selection-start-line="111" selection-start-column="74" selection-end-line="111" selection-end-column="74" />
+            <state relative-caret-position="208">
+              <caret line="112" column="29" lean-forward="true" selection-start-line="112" selection-start-column="29" selection-end-line="112" selection-end-column="29" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#876#918#0" expanded="false" />
-                <element signature="e#1384#1730#0" expanded="false" />
+                <element signature="e#926#968#0" expanded="false" />
+                <element signature="e#1434#1780#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -66,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="firebaseHelper.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="firebaseHelper.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/firebaseHelper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="213">
+              <caret line="36" column="40" lean-forward="false" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -130,8 +130,8 @@
         <option value="$PROJECT_DIR$/messagesHelper.js" />
         <option value="$PROJECT_DIR$/nlpHelper.js" />
         <option value="$PROJECT_DIR$/sentimentAnalysis/functions.py" />
-        <option value="$PROJECT_DIR$/firebaseHelper.js" />
         <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/firebaseHelper.js" />
       </list>
     </option>
   </component>
@@ -315,7 +315,7 @@
       <workItem from="1519461143427" duration="144000" />
       <workItem from="1523690338185" duration="18880000" />
       <workItem from="1524057997219" duration="8886000" />
-      <workItem from="1524899615830" duration="1448000" />
+      <workItem from="1524899615830" duration="1873000" />
     </task>
     <task id="LOCAL-00001" summary="Code alignment to submitted version">
       <created>1523698899835</created>
@@ -356,7 +356,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50863000" />
+    <option name="totallyTimeSpent" value="51288000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -436,8 +436,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#876#918#0" expanded="false" />
-            <element signature="e#1384#1730#0" expanded="false" />
+            <element signature="e#926#968#0" expanded="false" />
+            <element signature="e#1434#1780#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -496,8 +496,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#876#918#0" expanded="false" />
-            <element signature="e#1384#1730#0" expanded="false" />
+            <element signature="e#926#968#0" expanded="false" />
+            <element signature="e#1434#1780#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -540,8 +540,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#876#918#0" expanded="false" />
-            <element signature="e#1384#1730#0" expanded="false" />
+            <element signature="e#926#968#0" expanded="false" />
+            <element signature="e#1434#1780#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -567,8 +567,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#876#918#0" expanded="false" />
-            <element signature="e#1384#1730#0" expanded="false" />
+            <element signature="e#926#968#0" expanded="false" />
+            <element signature="e#1434#1780#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -586,35 +586,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#876#918#0" expanded="false" />
-            <element signature="e#1384#1730#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#876#918#0" expanded="false" />
-            <element signature="e#1384#1730#0" expanded="false" />
+            <element signature="e#926#968#0" expanded="false" />
+            <element signature="e#1434#1780#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -640,8 +613,35 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#876#918#0" expanded="false" />
-            <element signature="e#1384#1730#0" expanded="false" />
+            <element signature="e#926#968#0" expanded="false" />
+            <element signature="e#1434#1780#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#926#968#0" expanded="false" />
+            <element signature="e#1434#1780#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -659,8 +659,8 @@
           <caret line="121" column="0" lean-forward="true" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#876#918#0" expanded="false" />
-            <element signature="e#1384#1730#0" expanded="false" />
+            <element signature="e#926#968#0" expanded="false" />
+            <element signature="e#1434#1780#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -687,8 +687,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#876#918#0" expanded="false" />
-            <element signature="e#1384#1730#0" expanded="false" />
+            <element signature="e#926#968#0" expanded="false" />
+            <element signature="e#1434#1780#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -798,23 +798,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firebaseHelper.js">
+    <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="208">
+          <caret line="112" column="29" lean-forward="true" selection-start-line="112" selection-start-column="29" selection-end-line="112" selection-end-column="29" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#926#968#0" expanded="false" />
+            <element signature="e#1434#1780#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
+    <entry file="file://$PROJECT_DIR$/firebaseHelper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="111" column="74" lean-forward="true" selection-start-line="111" selection-start-column="74" selection-end-line="111" selection-end-column="74" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#876#918#0" expanded="false" />
-            <element signature="e#1384#1730#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="213">
+          <caret line="36" column="40" lean-forward="false" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>

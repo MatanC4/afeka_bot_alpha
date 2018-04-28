@@ -34,8 +34,13 @@ module.exports.saveMessageToConversation = function(data) {
         .push()
 
     data.messageId = messagegRef.key
-    console.log(JSON.stringify("Got ID", data.messageId))
-    return messagegRef.update(data)
+    console.log("Got ID", data.messageId)
+    return messagegRef.update(data).then(function (res) {
+        console.log("Got response inside saveMessageToConversation",JSON.stringify(res))
+        return Promise.resolve(res)
+    }).catch(function(err){
+        return Promise.reject(err)
+    })
 }
 /*return messagegRef.update(data).then(function(res){
 

@@ -2,6 +2,8 @@
 // git commit -m "test2"
 //git push heroku master
 
+//git Add . commit -m "test2" push heroku master
+
 
 //stop  process - heroku ps:scale web=0
 //run process  - heroku ps:scale web=1
