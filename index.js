@@ -31,25 +31,6 @@ var pythonProcess = spawn('python',['/Users/matka/Documents/school/Final project
  * Created by matka on 17/04/2018.
  */
 
-/*var client_config = {
-    'page_token': 'EAAeJc1IRQ9UBAE8d9OD0qZAFI0ZBigZCGZCP03Hx7uYPi36KZCrZBlSGJZApSm8fawqSQcLQunFGtZBwtEaJsdnRLinNC34BAsISbIRXVImZBU9UURF0fTrVa5ctVrXlZCE6JPYg3NZBZBDZA1DOhEe8afbZBd2l7SOHrYwOdCbt4mTDeVhzlKKZArTbR01dYFXXndKggJgYoKqwzCq3QZDZD',
-    'app_token': '2121453228082133|7CO96VUnUv2-AbjNU1Yf08EZOlE',
-    'api_version': 'v2.11'
-}
-
-var Client = new Messenger.Client(client_config);
-
-// PSID of the user
-var psid = 'me'
-
-// profile fields to retrieve
-var fields = ['id', 'first_name', 'last_name', 'profile_pic']
-*/
-
-
-
-
-
 //create express server
 const app = express()
 
@@ -97,17 +78,7 @@ app.post('/webhook/', function(req,res){
         //var text = _.get(event, "message.text", "There seems to be an error, please send your message again")
         var text = _.get(event, "message.text", null)
         //console.log(text)
-        /*Client.getUserProfile(psid, fields)
-            .then(res => {
-                // log the api response
-                console.log("facebook ********************")
-                console.log(JSON.stringify(res))
-                //console.log(res)
-            })
-            .catch(e)
-        {
-            console.error(e);
-        }*/
+
         if(sender && text){
             var data = {
                 userId: sender,
