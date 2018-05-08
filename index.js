@@ -31,7 +31,7 @@ var pythonProcess = spawn('python',['/Users/matka/Documents/school/Final project
  * Created by matka on 17/04/2018.
  */
 
-let client_config = {
+var client_config = {
     'page_token': 'EAAeJc1IRQ9UBAE8d9OD0qZAFI0ZBigZCGZCP03Hx7uYPi36KZCrZBlSGJZApSm8fawqSQcLQunFGtZBwtEaJsdnRLinNC34BAsISbIRXVImZBU9UURF0fTrVa5ctVrXlZCE6JPYg3NZBZBDZA1DOhEe8afbZBd2l7SOHrYwOdCbt4mTDeVhzlKKZArTbR01dYFXXndKggJgYoKqwzCq3QZDZD',
     'app_token': '2121453228082133|7CO96VUnUv2-AbjNU1Yf08EZOlE',
     'api_version': 'v2.11'
