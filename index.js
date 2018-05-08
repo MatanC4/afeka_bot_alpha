@@ -97,7 +97,7 @@ app.post('/webhook/', function(req,res){
         //var text = _.get(event, "message.text", "There seems to be an error, please send your message again")
         var text = _.get(event, "message.text", null)
         //console.log(text)
-        Client.getUserProfile(psid, fields)
+        /*Client.getUserProfile(psid, fields)
             .then(res => {
                 // log the api response
                 console.log("facebook ********************")
@@ -107,7 +107,7 @@ app.post('/webhook/', function(req,res){
             .catch(e)
         {
             console.error(e);
-        }
+        }*/
         if(sender && text){
             var data = {
                 userId: sender,
