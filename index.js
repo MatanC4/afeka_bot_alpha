@@ -17,7 +17,7 @@ var express = require('express')
 var bodyParser = require('body-parser')
 var convHelper = require('./conversationHelper.js')
 var _ = require('lodash')
-const Messenger = require('messenger-node');
+var Messenger = require('messenger-node');
 
 var spawn = require("child_process").spawn;
 var pythonProcess = spawn('python',['/Users/matka/Documents/school/Final project/afeka_bot_alpha/sentimentAnalysis/functions.py']);
@@ -31,20 +31,22 @@ var pythonProcess = spawn('python',['/Users/matka/Documents/school/Final project
  * Created by matka on 17/04/2018.
  */
 
-
 let client_config = {
     'page_token': 'EAAeJc1IRQ9UBAE8d9OD0qZAFI0ZBigZCGZCP03Hx7uYPi36KZCrZBlSGJZApSm8fawqSQcLQunFGtZBwtEaJsdnRLinNC34BAsISbIRXVImZBU9UURF0fTrVa5ctVrXlZCE6JPYg3NZBZBDZA1DOhEe8afbZBd2l7SOHrYwOdCbt4mTDeVhzlKKZArTbR01dYFXXndKggJgYoKqwzCq3QZDZD',
     'app_token': '2121453228082133|7CO96VUnUv2-AbjNU1Yf08EZOlE',
     'api_version': 'v2.11'
 }
 
-const Client = new Messenger.Client(client_config);
+var Client = new Messenger.Client(client_config);
 
 // PSID of the user
-let psid = '1721073544644202'
+var psid = '1721073544644202'
 
 // profile fields to retrieve
-let fields = ['id', 'first_name', 'last_name', 'profile_pic']
+var fields = ['id', 'first_name', 'last_name', 'profile_pic']
+
+
+
 
 
 
@@ -88,22 +90,24 @@ app.post('/webhook/', function(req,res){
     var events = _.get(req,"body.entry[0].messaging", [])
     console.log("events:", events.length)
     console.log(JSON.stringify(events))
-    Client.getUserProfile(psid, fields)
-        .then(res => {
-            // log the api response
-            console.log(res);
-        })
-        .catch(e)
-    {
-        console.error(e);
-    }
+
 
     events.forEach(function(event){
         var sender = _.get(event,"sender.id", null)
         //var text = _.get(event, "message.text", "There seems to be an error, please send your message again")
         var text = _.get(event, "message.text", null)
         //console.log(text)
-
+        Client.getUserProfile(psid, fields)
+            .then(res => {
+                // log the api response
+                console.log("facebook ********************")
+                console.log(JSON.stringify(res))
+                //console.log(res)
+            })
+            .catch(e)
+        {
+            console.error(e);
+        }
         if(sender && text){
             var data = {
                 userId: sender,
