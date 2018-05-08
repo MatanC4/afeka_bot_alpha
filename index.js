@@ -40,7 +40,7 @@ var client_config = {
 var Client = new Messenger.Client(client_config);
 
 // PSID of the user
-var psid = '1721073544644202'
+var psid = 'me'
 
 // profile fields to retrieve
 var fields = ['id', 'first_name', 'last_name', 'profile_pic']
