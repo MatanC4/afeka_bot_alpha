@@ -43,7 +43,10 @@ module.exports.handleIncomingMessage = function (incomingMsgData) {
         mHelper.respondToUser(responseData).then(function(){
             //4. save response to DB
             mHelper.saveMessage(responseData)
-        })
+        }).catch(function (err) {
+            console.log("Promise Rejected" , err);
+            return Promise.reject(err)
+        });
     })
 
 
