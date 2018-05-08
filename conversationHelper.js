@@ -26,7 +26,7 @@ module.exports.handleIncomingMessage = function (incomingMsgData) {
         //2.c understand entity from intent
         //2.d fetch content according to user request and put in responseText
 
-        var responseText = ""
+        var responseText = "response"
 
 
         var responseData = {

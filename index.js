@@ -88,8 +88,6 @@ app.post('/webhook/', function(req,res){
                 sequence: _.get(event, "message.seq", null),
                 nlpEntity: _.get(event, "message.nlp",null)
             }
-
-
             //console.log(JSON.stringify(data))
             convHelper.handleIncomingMessage(data)
 
