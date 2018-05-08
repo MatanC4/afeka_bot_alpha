@@ -46,15 +46,7 @@ let psid = '1721073544644202'
 // profile fields to retrieve
 let fields = ['id', 'first_name', 'last_name', 'profile_pic']
 
-Client.getUserProfile(psid, fields)
-    .then(res => {
-        // log the api response
-        console.log(res);
-    })
-.catch(e)
-{
-    console.error(e);
-}
+
 
 //create express server
 const app = express()
@@ -96,6 +88,15 @@ app.post('/webhook/', function(req,res){
     var events = _.get(req,"body.entry[0].messaging", [])
     console.log("events:", events.length)
     console.log(JSON.stringify(events))
+    Client.getUserProfile(psid, fields)
+        .then(res => {
+            // log the api response
+            console.log(res);
+        })
+        .catch(e)
+    {
+        console.error(e);
+    }
 
     events.forEach(function(event){
         var sender = _.get(event,"sender.id", null)
