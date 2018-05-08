@@ -17,7 +17,7 @@ var express = require('express')
 var bodyParser = require('body-parser')
 var convHelper = require('./conversationHelper.js')
 var _ = require('lodash')
-var Messenger = require('messenger-node');
+//var Messenger = require('messenger-node');
 
 var spawn = require("child_process").spawn;
 var pythonProcess = spawn('python',['/Users/matka/Documents/school/Final project/afeka_bot_alpha/sentimentAnalysis/functions.py']);
@@ -31,7 +31,7 @@ var pythonProcess = spawn('python',['/Users/matka/Documents/school/Final project
  * Created by matka on 17/04/2018.
  */
 
-var client_config = {
+/*var client_config = {
     'page_token': 'EAAeJc1IRQ9UBAE8d9OD0qZAFI0ZBigZCGZCP03Hx7uYPi36KZCrZBlSGJZApSm8fawqSQcLQunFGtZBwtEaJsdnRLinNC34BAsISbIRXVImZBU9UURF0fTrVa5ctVrXlZCE6JPYg3NZBZBDZA1DOhEe8afbZBd2l7SOHrYwOdCbt4mTDeVhzlKKZArTbR01dYFXXndKggJgYoKqwzCq3QZDZD',
     'app_token': '2121453228082133|7CO96VUnUv2-AbjNU1Yf08EZOlE',
     'api_version': 'v2.11'
@@ -44,7 +44,7 @@ var psid = 'me'
 
 // profile fields to retrieve
 var fields = ['id', 'first_name', 'last_name', 'profile_pic']
-
+*/
 
 
 
