@@ -12,7 +12,7 @@ var mHelper = require('./messagesHelper')
 module.exports.analyzeUserRequest = function (text) {
     // get intention from Wit.ai module
     var nlpResult = nlpHelper.getUserIntents(text)
-
+    var nlpInstructor = new NlpIntentionExtractor(nlpResult)
 
 
 }
@@ -33,7 +33,7 @@ module.exports.handleIncomingMessage = function (incomingMsgData) {
             userId: incomingMsgData.userId,
             sender: "bot",
             date : Date.now(),
-            message: responseText,
+            message: "response",
             sequence: null ,
             //nlpEntity: _.get(dtObj, "nlpEntity",null),
             //refToUserMsg: _.get(dtObj,"messageId",null)
@@ -43,18 +43,16 @@ module.exports.handleIncomingMessage = function (incomingMsgData) {
         mHelper.respondToUser(responseData).then(function(){
             //4. save response to DB
             mHelper.saveMessage(responseData)
-        }).catch(function (err) {
-            console.log("Promise Rejected" , err);
-            return Promise.reject(err)
-        });
+        })
     })
 
-
-
-
-
-
 }
+
+
+
+
+
+
 /*
  {
  "_text": "send me the rules of exams abd sexual harrassment",

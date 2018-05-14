@@ -11,6 +11,8 @@ class NlpIntentionExtractor{
         this.protocol_type = null
         this.phone_number = null
         // add the rest of intents here
+
+
         this.extractData(data)
     }
 
