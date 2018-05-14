@@ -43,9 +43,7 @@ module.exports.respondToUser =  function(data){
             }
             return Promise.reject(err || res.body.error)
         })
-}.catch(function () {
-    console.log("error")
-})
+}
 
 
 

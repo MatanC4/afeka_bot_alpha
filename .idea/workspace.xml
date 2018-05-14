@@ -89,8 +89,8 @@
       <file leaf-file-name="messagesHelper.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/messagesHelper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="46" column="24" lean-forward="true" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+            <state relative-caret-position="516">
+              <caret line="45" column="1" lean-forward="true" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -356,7 +356,7 @@
       <workItem from="1524057997219" duration="8886000" />
       <workItem from="1524899615830" duration="17618000" />
       <workItem from="1525801849498" duration="8646000" />
-      <workItem from="1526330411015" duration="1159000" />
+      <workItem from="1526330411015" duration="1254000" />
     </task>
     <task id="LOCAL-00001" summary="Code alignment to submitted version">
       <created>1523698899835</created>
@@ -404,7 +404,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76838000" />
+    <option name="totallyTimeSpent" value="76933000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -878,8 +878,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/messagesHelper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="46" column="24" lean-forward="true" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+        <state relative-caret-position="516">
+          <caret line="45" column="1" lean-forward="true" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
           <folding />
         </state>
       </provider>
