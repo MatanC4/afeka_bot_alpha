@@ -43,6 +43,8 @@ module.exports.handleIncomingMessage = function (incomingMsgData) {
         mHelper.respondToUser(responseData).then(function(){
             //4. save response to DB
             mHelper.saveMessage(responseData)
+        }).catch(function () {
+            console.log("error returning from respond to user")
         })
     })
 
