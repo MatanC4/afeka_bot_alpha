@@ -42,7 +42,9 @@ module.exports.respondToUser =  function(data){
                 return Promise.resolve(res)
             }
             return Promise.reject(err || res.body.error)
-        })
+        }.catch(function () {
+            
+        }))
 }
 
 
