@@ -39,9 +39,9 @@ module.exports.respondToUser =  function(data){
                 console.log("Response body error -  sending message to user failed: " + res.body.error.message)
             }else{
                 // success
-                return Promise.resolve(res)
+                //return Promise.resolve(res)
             }
-            return Promise.reject(err || res.body.error)
+            //return Promise.reject(err || res.body.error)
         })
 }
 

@@ -20,6 +20,7 @@ module.exports.analyzeUserRequest = function (text) {
 module.exports.handleIncomingMessage = function (incomingMsgData) {
     // 1. Save the incoming msg to DB
     mHelper.saveMessage(incomingMsgData).then(function () {
+
         // 2. analyze message content and decide about response
         //2.a get nlp result
         //2.b get nlp intent (extract the data)
@@ -39,10 +40,10 @@ module.exports.handleIncomingMessage = function (incomingMsgData) {
             //refToUserMsg: _.get(dtObj,"messageId",null)
         }
 
-        //3. send response back to the user
-        mHelper.respondToUser(responseData).then(function(){
-            //4. save response to DB
-            mHelper.saveMessage(responseData)
+        //3. save response to DB
+        mHelper.saveMessage(responseData).then(function(){
+            //4.send response back to the user
+            mHelper.respondToUser(responseData)
         }).catch(function () {
             console.log("error returning from respond to user")
         })

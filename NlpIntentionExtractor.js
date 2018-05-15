@@ -20,11 +20,11 @@ class NlpIntentionExtractor{
         //extract all data from data.entities
         var entities = _.get(data,"entities", {})
         // get the data keys -  such as intent, protocol_type etc
-        var keys = Object.keys(entities)
-        keys.forEach(function (k) {
+        var intents = Object.keys(entities)
+        intents.forEach(function (intentType) {
             //init all variables needed for the extractor and populate with possible value from response
-            // in fact call relevant function for each key, pass the relevant value(entities[k])
-            this[k] = this["handle_"+k](entities[k])
+            // in fact call relevant function for each key, pass the relevant value(entities[intentType])
+            this[intentType] = this["handle_"+intentType](entities[intentType])
 
 
         })
