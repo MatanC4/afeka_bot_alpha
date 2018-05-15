@@ -11,9 +11,11 @@ var mHelper = require('./messagesHelper')
 
 module.exports.analyzeUserRequest = function (text) {
     // get intention from Wit.ai module
-    var nlpResult = nlpHelper.getUserIntents(text)
-    console.log(nlpResult)
-    console.log(JSON.stringify(nlpResult))
+     nlpHelper.getUserIntents(text).then(function (data) {
+        console.log(data)
+        console.log(JSON.stringify(data))
+    })
+
 
     //var nlpInstructor = new NlpIntentionExtractor(nlpResult)
 
