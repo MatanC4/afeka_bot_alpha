@@ -28,7 +28,7 @@ module.exports.respondToUser =  function(data){
             //request payload
             json:{
                 recipient: {id: data.userId},
-                message: {text: data.responseText}
+                message: {text: data.message}
             }
         },
         // implement the request result callback
