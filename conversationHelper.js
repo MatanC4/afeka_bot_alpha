@@ -9,7 +9,7 @@ var mHelper = require('./messagesHelper')
 
 
 
-module.exports.analyzeUserRequest = function (text) {
+function analyzeUserRequest(text) {
     // get intention from Wit.ai module
      nlpHelper.getUserIntents(text).then(function (data) {
         console.log(data)
@@ -31,7 +31,7 @@ module.exports.handleIncomingMessage = function (incomingMsgData) {
         //2.b get nlp intent (extract the data)
         //2.c understand entity from intent
         //2.d fetch content according to user request and put in responseText
-        this.analyzeUserRequest(incomingMsgData.message)
+        analyzeUserRequest(incomingMsgData.message)
         var responseText = "response"
 
 
@@ -57,7 +57,7 @@ module.exports.handleIncomingMessage = function (incomingMsgData) {
 }
 
 
-
+module.exports.analyzeUserRequest = analyzeUserRequest
 
 
 
