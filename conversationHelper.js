@@ -14,6 +14,7 @@ function analyzeUserRequest(text) {
      nlpHelper.getUserIntents(text).then(function (data) {
         console.log(data)
         console.log(JSON.stringify(data))
+         var intention = new NlpIntentionExtractor(data)
     })
 
 
