@@ -31,7 +31,7 @@ module.exports.handleIncomingMessage = function (incomingMsgData) {
         //2.b get nlp intent (extract the data)
         //2.c understand entity from intent
         //2.d fetch content according to user request and put in responseText
-        analyzeUserRequest(incomingMsgData.message)
+        this.analyzeUserRequest(incomingMsgData.message)
         var responseText = "response"
 
 
