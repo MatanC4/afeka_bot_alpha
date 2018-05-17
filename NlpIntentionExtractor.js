@@ -3,9 +3,11 @@
  */
 var _ = require('lodash')
 const CONFIDENCE_BAR = 0.75
+
 const INTENT_CATEGORIES = {
-    protocol: "protocol"
-    // continue to the rest
+    protocol: "protocol",
+    mail:"mail",
+    phone:"phone"
 }
 
 const INTENT_CATEGORIES_TYPES = {
@@ -55,32 +57,50 @@ class NlpIntentionExtractor{
                 if(categoryType.value === "true"){
                     // typeValue.value !== "true" - when NLP doesnt know the context we receive value = true (means nothing)
                     // return to user - menu or request to send question again clearer
-
+                    this.isDisplaySpecificMenu = true
+                    this.intent = intentCategory
                     return
                 }
 
                 if(categoryType.confidence >= CONFIDENCE_BAR ){
                     // i figured out what user wants
+                    this.isEntity = true
+                    this.isConfident = true
 
                     if(INTENT_CATEGORIES[intentCategory] && INTENT_CATEGORIES_TYPES[categoryType.value]){
                         // fetch request from DB
+                        this.isAnswerExist = true
+                        this.intent = intentCategory
+                        this.entity = categoryType.value
+                        return
 
                     }else{
                         console.log("There s a missmatch in my config and wit.ai")
                         // return to user - request to re submit a clearer question
+                        this.isMissMatch = true
+                        this.isAskUserToAskAgain = true
+
+                        return
                     }
                 }else{
+                    this.isConfident = false
+
                     // return to user - menu or request to send question again clearer
                     // !!!!!!! we need to add a new format  - learning mechanism
-                    this.isLearningActivated = true
+                    this.isShouldLearn = true
                     this.learningMessage = "add user message here.."
+                    // here we will also tell the user we are checking if we need to learn this phrase
                 }
             }
         }else{
-
             if(Object.keys(entities).length > 0){
                 // need to understand what intentCategory we received and in what confidence and answer accordignly:
                 // "i understnad you iwsh to talk about exams, but what would you like to do?"
+                if(Object.keys(entities).length === 1){
+                    this.isDisplayGeneralMenu = true
+
+                }
+
             }else{
                 // entititirs obj is empty
                 // we didnt get the user intent, we return the general menu to the user
