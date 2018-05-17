@@ -26,7 +26,7 @@ function analyzeUserRequest(text) {
 module.exports.handleIncomingMessage = function (incomingMsgData) {
     // 1. Save the incoming msg to DB
     mHelper.saveMessage(incomingMsgData).then(function () {
-
+            console.log("I am in handleIncomingMessage")
         // 2. analyze message content and decide about response
         //2.a get nlp result
         //2.b get nlp intent (extract the data)
