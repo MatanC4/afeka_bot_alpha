@@ -86,7 +86,24 @@ module.exports.saveBotResponse = function(data){
     })
 }
 
+
+module.exports.fetchAnswerCompletion = function(data){
+    return admin
+        .database()
+        .ref(data.pathToFirebaseResponse)
+        .once('value')
+        .then(function(snapshot) {
+        var result = snapshot.val() || null;
+        // return as promise
+
+    });
+
+
+
+}
+
+
 /*
  [{"sender":{"id":"1721073544644202"},"recipient":{"id":"1872968486296824"},"timestamp":1523708162689,"message":{"mid":"mid.$cAAandFxFMG1o9Vq6gVixBVyDIiJm","seq":82481,"text":"שוב","nlp":{"entities":{}}}}]
 
-**/
+ **/

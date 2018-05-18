@@ -64,8 +64,6 @@ class NlpIntentionExtractor{
 
                 if(categoryType.confidence >= CONFIDENCE_BAR ){
                     // i figured out what user wants
-                    this.isEntity = true
-                    this.isConfident = true
 
                     if(INTENT_CATEGORIES[intentCategory] && INTENT_CATEGORIES_TYPES[categoryType.value]){
                         // fetch request from DB
@@ -78,17 +76,18 @@ class NlpIntentionExtractor{
                         console.log("There s a missmatch in my config and wit.ai")
                         // return to user - request to re submit a clearer question
                         this.isMissMatch = true
-                        this.isAskUserToAskAgain = true
 
                         return
                     }
                 }else{
-                    this.isConfident = false
+                    this.isShouldLearn = true
+                    this.confidentValue = categoryType.confidence
+                    this.intent = intentCategory
+                    this.entity = categoryType.value
+                    return
 
                     // return to user - menu or request to send question again clearer
                     // !!!!!!! we need to add a new format  - learning mechanism
-                    this.isShouldLearn = true
-                    this.learningMessage = "add user message here.."
                     // here we will also tell the user we are checking if we need to learn this phrase
                 }
             }
@@ -96,15 +95,24 @@ class NlpIntentionExtractor{
             if(Object.keys(entities).length > 0){
                 // need to understand what intentCategory we received and in what confidence and answer accordignly:
                 // "i understnad you iwsh to talk about exams, but what would you like to do?"
-                if(Object.keys(entities).length === 1){
-                    this.isDisplayGeneralMenu = true
+                this.isDisplayGeneralMenu = true
 
+                if(Object.keys(entities).length === 1) {
+                    var permittedCategories = Object.keys(INTENT_CATEGORIES)
+                    var res = permittedCategories.find(function (category) {
+                        return Object.keys(entities)[0] === category
+                    })
+                    if (res) {
+                        this.entity = Object.keys(entities)[0]
+                        // mention to user we know the entity he mentioned and present general menu
+                    }
+                    return
                 }
-
             }else{
                 // entititirs obj is empty
                 // we didnt get the user intent, we return the general menu to the user
                 this.isDisplayGeneralMenu = true
+                return
             }
         }
 

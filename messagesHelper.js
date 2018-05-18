@@ -46,6 +46,11 @@ module.exports.respondToUser =  function(data){
 }
 
 
+module.exports.fetchAnswerCompletionFromDB =  function(data){
+    dbHelper.fetchAnswerCompletion(data).then(function(result){
+        // return as promise
+    })
+}
 
 
 module.exports.token = token
